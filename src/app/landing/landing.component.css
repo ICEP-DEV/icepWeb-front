@@ -1,0 +1,197 @@
+ /* .i-container{
+   display: flex;
+ } */
+ .carousel-item{
+  height: 90vh;
+} 
+
+.carousel-item img{
+  background-position-x: center;
+}
+.nav{
+  display: fixed;
+  width: 100%;
+  height: 10vh;
+}
+
+.nav-row
+{
+  display: flex ;
+  background-color:  lightslategrey;
+  width: 100%;
+} 
+
+/* .nav-row{
+  border-width: 20px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to left, 
+      lightslategrey, 
+      rgb(101, 119, 137)
+    ) 1 100%;
+} */
+
+.col-item{
+  flex: 3;
+  margin-left: 10px;
+}
+.col-items2{
+  flex: 1;
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  overflow: auto;
+  background-color: lightslategrey;
+  display: flex;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.col-items2 ul li a{
+  margin-top: 10px;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.col-items2 li a:hover {
+  background-color: rgb(132, 155, 178);;
+  color: white;
+  text-shadow: 0px 0px 10px  white;
+}
+
+
+h3{
+  color: black;
+}
+p{
+  color: black;
+}
+
+/* section  */
+
+.row-sec{
+  display: flex;
+ 
+}
+.col1{
+  flex: 1;
+  text-align: center;
+  background-color: lightslategrey;
+}
+.col1 p{
+  color: white;
+}
+.col1 h3{
+  color: white;
+}
+
+.col1:hover{
+  background-color: rgb(132, 155, 178);
+}
+
+.col2{
+  padding-top: 10px;
+  flex: 1;
+  text-align: center;
+  background-color: lightslategrey;
+}
+.col2 p{
+  color: white;
+}
+.col2 h3{
+  color: white;
+}
+.col2:hover{
+  background-color:rgb(132, 155, 178);
+}
+
+.col3{
+  flex: 1;
+  text-align: center;
+  background-color: lightslategrey;
+}
+.col3 p{
+  color: white;
+}
+.col3 h3{
+  color: white;
+}
+.col3:hover{
+  background-color:rgb(132, 155, 178);
+}
+
+/* Leaders */
+.row-3{
+  display: flex;
+}
+  .row-3 img {
+    padding-top: 20px;
+    border-radius: 50%;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  } 
+
+/* End Leaders */
+
+/* Notice board */
+  .rowX{
+    display: flex;
+    padding-bottom: 30px;
+  }
+
+/*  Notice board  End */
+
+/* Footer Stuff */
+footer{
+  background-color: lightslategrey;
+  color: white;
+}
+footer a{
+  color: white;
+}
+
+/*End Footer Stuff */
+
+
+
+
+section{
+  background-color: #292929;
+  color: white;
+  padding-top: 5%;
+  padding-bottom: 4%;
+  
+}
+
+.mar{
+  color:white;
+  padding-left: 480px;
+}
+
+.mar2{
+  color:white;
+  padding-left: 690px;
+  size: 50px;
+  
+}
+
+.aw{
+  text-align: center;
+}
+
+
+
+ .module {
+    position: relative;
+    font-size: 24px;
+}
