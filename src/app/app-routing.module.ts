@@ -1,35 +1,72 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {LandingComponent} from './landing/landing.component';
-import { ServicesComponent } from './services/services.component';
-import {AboutComponent } from './about/about.component';
-import {ProjectsComponent } from './projects/projects.component';
-import {ContactsComponent} from './contacts/contacts.component';
-import {PartnersComponent} from './partners/partners.component';
-import { RegisterComponent } from './register/register.component';
+import { RouterModule, Routes } from '@angular/router';
+import { CreateProfileComponent } from './create-profile/create-profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
-import { ApplicationComponent } from './application/application.component';
-import {UserDashComponent } from './user-dash/user-dash.component';
-import {ProfileComponent } from  './profile/profile.component';
+import { StatusComponent } from './status/status.component';
+import { MessagesComponent } from './messages/messages.component';
+import { ApplyComponent } from './apply/apply.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AdminComponent } from './admin/admin.component';
+import { ViewProfilesComponent } from './view-profiles/view-profiles.component';
+import { ViewApplicationsComponent } from './view-applications/view-applications.component';
+import { PostVacanciesComponent } from './post-vacancies/post-vacancies.component';
+
 
 const routes: Routes = [
-  {path:'landing', component: LandingComponent},
-  {path:'about',component:AboutComponent},
-  {path:'services',component: ServicesComponent},
-  {path:'projects',component:ProjectsComponent},
-  {path:'contacts',component:ContactsComponent},
-  {path:'partners',component:PartnersComponent},
-  {path: 'userDash',component:UserDashComponent},
-  {path:'register', component: RegisterComponent },
-  {path:'login', component: LoginComponent },
-  {path: 'profile',component:ProfileComponent },
-  {path:'application', component: ApplicationComponent },
-  {path:'',redirectTo:'landing', pathMatch:'full'}
- 
+  { path: '',
+redirectTo: '/create-profile' ,
+pathMatch: 'full'},
+{
+  path: 'create-profile',
+  component: CreateProfileComponent
+
+},
+{
+  path:'dashboard',
+  component: DashboardComponent
+},
+{
+  path:'login',
+  component:LoginComponent
+},
+{
+  path:'status',
+  component:StatusComponent
+},
+{
+  path:'messages',
+  component:MessagesComponent
+},
+{
+  path:'apply',
+  component:ApplyComponent
+},
+{
+  path:'profile',
+  component: ProfileComponent
+},
+{
+  path:'admin',
+  component: AdminComponent
+},
+{
+  path:'view-applications',
+  component: ViewApplicationsComponent
+},
+{
+  path:'view-profiles',
+  component: ViewProfilesComponent
+},
+{
+  path:'post-vacancies',
+  component: PostVacanciesComponent
+}
+
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-

@@ -1,0 +1,267 @@
+
+        
+<style>
+    /* You can add global styles to this file, and also import other style files */
+body
+{
+    margin: -10;
+    padding: -10;
+    
+    font-family: sans-serif;
+    background-size: cover;
+    background-position: center;
+}
+p{
+    color: white;
+}
+.regform
+{
+
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: rgba(56, 82, 153, 0.294);
+    padding: 50px;
+    margin: 2% auto 0;
+    text-align: center;
+}
+label{
+    color: white;
+}
+
+
+
+
+
+.loginform
+{
+
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: #fff;
+    padding: 30px;
+    margin: 8% auto 0;
+    text-align: center;
+}
+
+.homeform
+{
+
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: #fff;
+    padding: 30px;
+    margin: 8% auto 0;
+    text-align: center;
+}
+
+.regform h1{
+
+    color: #ffffff;
+    margin-bottom:30px;
+}
+
+.homeform h1{
+
+    color: #44a6ec;
+    margin-bottom:30px;
+}
+
+.loginform h1{
+
+    color: #44a6ec;
+    margin-bottom:30px;
+}
+
+.input-box
+{
+   border-radius: 20px; 
+   padding:10px;
+   margin:10px 0;
+   width:100%;
+   border:1px solid #999;
+   outline:none;
+}
+
+button{
+
+    color: white;
+    width:50%;
+    padding:10px;
+    border-radius:20px ;
+    font-size: 15px;
+    margin: 10px 0;
+    border:none;
+    outline:none;
+    cursor: pointer;
+}
+
+.reg_btn
+{
+    background-color:#ec444c ;
+}
+
+img
+{
+    width:100px ;
+}
+
+.container
+{
+    width:50%;
+    margin:0 auto;
+}
+header
+{
+    background: rgba(255, 255, 255, 0.657);
+}
+nav ul{
+    padding:0;
+    list-style: none;
+}
+
+nav li{
+display:inline-block;
+
+;
+
+}
+
+nav a
+{
+    color:#44a6ec;
+    text-decoration: none;
+    text-transform: uppercase; 
+}
+nav a:hover{
+
+    color:yellow;
+    transition: .4s;
+
+}
+.logoI
+{
+
+    background-color: rgba(255, 255, 255, 0.568);
+}
+
+
+</style>
+  
+    
+ 
+
+        <section class="overlay">
+        <div class="regform">
+            <div class="logoI"><img src="assets\pictures\ICEP-Logo.png"></div>
+        
+            <h1>Create ICEP Profile</h1>
+            
+            
+
+            <form name="userform">
+
+                   <div class="form-group">
+                    
+                            <table>
+                                <tr>
+                                    <th>
+                                    <label>Student No:</label>
+                                    </th>
+                                    <td>
+                                        <input [(ngModel)] ="createProf.studentNumber"type="number" size="8" name="studentNumber" class="input-box" placeholder="Student Number" ng-model="studentNumber" required ><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                     <label for="specialization">Specialization:</label>                                    </th>
+                                    <td>
+                                        <select [(ngModel)] ="createProf.specialization" name="specialization" id="subject" required>
+                                            <option value="" disabled selected hidden>Select</option>
+                                            <option value="SOFTWARE DEVELOPMENT">SOFTWARE DEVELOPMENT</option>
+                                            <option value="BUSINESS ANALYST">BUSINESS ANALYST</option>
+                                            <option value="MULTIMEDIA">MULTIMEDIA </option>
+                                            <option value="COMPUTER SYSTEMS">COMPUTER SYSTEMS</option>
+                                          
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                    <label> First Name:</label>
+                                    </th>
+                                    <td>
+                                        <input [(ngModel)] ="createProf.firstName" type="text" name="firstName" class="input-box" placeholder="First Name" ng-model="firstName" required><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                    <label>Last Name:</label>
+                                    </th>
+                                    <td>
+                                        <input [(ngModel)] ="createProf.lastName" type="text" name="lastName" class="input-box" placeholder="Last Name" required  ng-model="lastName" required ><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                    <label>ID No:</label>
+                                    </th>
+                                    <td>
+                                        <input [(ngModel)] ="createProf.idNumber" type="number" size="13" name="idNumber" class="input-box" placeholder="Identitiy Number" ng-model="idNumber" required><br>
+                                    </td>
+                                </tr>
+                               
+                                <tr>
+                                    <th>
+                                    <label>Address:</label>
+                                    </th>
+                                    <td>
+                                        <input [(ngModel)] ="createProf.address" type="text" name="address" class="input-box" placeholder="Address" ng-model="address" required><br>
+                                    </td>
+                                <tr>
+                                    <th>
+                                    <label>Cell No:</label>
+                                    </th>
+                                    <td>
+                                        <input [(ngModel)] ="createProf.contactNumber" type="text" size="10" name="contactNumber" class="input-box" placeholder="Contact Number" ng-model="contactNumber" required ><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <th><label>Email:</label> &nbsp;
+                          
+                                  </th>
+                                  <td><input [(ngModel)] ="createProf.email" type="email" name="email" class="input-box"  placeholder="Email" ng-model="email" required></td>
+                          
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label>Password:</label>
+                                    </th>
+                                    <td>
+                                        <input [(ngModel)] ="createProf.password" type="password" name="password" class="input-box"  placeholder="Password here" ng-model="password" required>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <button (click) = "createProfile()" type="submit" class="reg_btn" [routerLink]="'/login'">Create Profile</button>
+                            <div *ngIf ="showMsg">show</div>
+                            <hr>
+                            <p> already have a Profile? <button [routerLink]="'/login'" class="reg_btn"> Click here to log in</button>
+                   </div>
+            </form>
+            
+        
+            
+
+            <hr>
+           <p> &copy; all rights reserved</p>
+
+           
+
+           
+
+
+        </div> 
+    </section>
+
+
+

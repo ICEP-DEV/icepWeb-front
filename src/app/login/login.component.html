@@ -1,52 +1,211 @@
-<div class="container">
-    <div class = " mx-auto" style="width: 550px;">
-        <a href=landing> <img src = "/assets/pictures/ICEP-Logo.png" ></a>
-    </div>
-    <!-- Modal -->
-    <!-- lunch button uses id as referrence -->
-    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="icepRegisterUser"
-        aria-hidden="true">
-        <div class="modal-dialog modal-ls" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-light justify-content-center">
-                    <h5 class="modal-title ">ICEP Login</h5>
-                </div>
-                <form>
-                    <div class="modal-body">
-    
-                        <div class="form-group">
-                            <label>Email address</label>
-                            <input type="email" formControlName="email" required class="form-control" aria-describedby="emailHelp"
-                                placeholder="Enter your Email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="password" formControlName="pword" required class="form-control"
-                                        placeholder="Enter Secret Password">
-                                </div>
-                            </div>
-                           
-                        </div>
-    
-    
-                       
-                    </div>
-                    
-                        <div class="modal-footer justify-content-center">
-                            <button type="submit" class="btn" >Login</button> 
-                            <a href="application">Apply For ICEP</a> 
-                        </div>           
-                </form>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Modal end -->
-</div>
 
+        
+<style>
+    /* You can add global styles to this file, and also import other style files */
+body
+{
+    margin: -10;
+    padding: -10;
+    background-image: url(back.jpg);
+    font-family: sans-serif;
+    background-size: cover;
+    background-position: center;
+}
+p{
+    color: white;
+}
+.regform
+{
+
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: rgba(56, 82, 153, 0.294);
+    padding: 0px;
+    margin: 8% auto 0;
+    text-align: center;
+}
+label{
+    color: white;
+}
+
+
+
+
+
+.loginform
+{
+
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: #fff;
+    padding: 30px;
+    margin: 8% auto 0;
+    text-align: center;
+}
+
+.homeform
+{
+
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: #fff;
+    padding: 30px;
+    margin: 8% auto 0;
+    text-align: center;
+}
+
+.regform h1{
+
+    color: #ffffff;
+    margin-bottom:30px;
+}
+
+.homeform h1{
+
+    color: #44a6ec;
+    margin-bottom:30px;
+}
+
+.loginform h1{
+
+    color: #44a6ec;
+    margin-bottom:30px;
+}
+
+.input-box
+{
+   border-radius: 20px; 
+   padding:10px;
+   margin:10px 0;
+   width:100%;
+   border:1px solid #999;
+   outline:none;
+   clear: both;
+}
+
+button{
+
+    color: white;
+    width:50%;
+    padding:10px;
+    border-radius:20px ;
+    font-size: 15px;
+    margin: 10px 0;
+    border:none;
+    outline:none;
+    cursor: pointer;
+}
+
+.reg_btn
+{
+    background-color:#ec444c ;
+}
+
+img
+{
+    width:100px ;
+}
+
+.container
+{
+    width:50%;
+    margin:0 auto;
+    clear: both;
+}
+
+header
+{
+    background: rgba(255, 255, 255, 0.657);
+}
+nav ul{
+    padding:0;
+    list-style: none;
+}
+
+nav li{
+display:inline-block;
+
+;
+
+}
+
+nav a
+{
+    color:#44a6ec;
+    text-decoration: none;
+    text-transform: uppercase; 
+}
+nav a:hover{
+
+    color:yellow;
+    transition: .4s;
+
+}
+.logoI
+{
+    background-color: rgba(255, 255, 255, 0.568);
+}
+a{
+    color:white ;
+}
+a:hover{
+    color: blue;
+}
+
+
+</style>
+   
+    
+    <body>
+
+        <section class="overlay">
+        <div class="regform">
+            <div class="logoI"><img src="assets\pictures\ICEP-Logo.png"></div>
+        
+            <h1>LOG IN</h1>
+            
+            
+
+            <form name="userform">
+
+                   <div class="form-group">
+                    <table>
+                        <tr>
+                          <th><label>Email:</label> &nbsp;
+                  
+                          </th>
+                          <td><input type="text" name="Email" class="input-box"  placeholder="Email" ng-model="username" ng-required="true"></td>
+                  
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>Password:</label>
+                            </th>
+                            <td>
+                                <input type="password" name="userpass" class="input-box"  placeholder="Password here" ng-model="userpass" ng-required="true">
+                            </td>
+                        </tr>
+                    </table>
+                    <button [routerLink]="'/dashboard'" class="reg_btn">Log in</button>
+                     <!-- button type="submit" class="reg_btn" href="">Login </button> -->
+                            <hr>
+                            <p> New here?<a href="index.html"> click here to create a profile</a></p>
+                   </div>
+            </form>
+            
+        
+            
+
+            <hr>
+           <p> &copy; all rights reserved</p>
+
+           
+
+           
+
+
+        </div> 
+    </section>
+</body>
 
 

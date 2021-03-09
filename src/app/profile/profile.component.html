@@ -1,101 +1,277 @@
- <div class="container">
 
-    <div class="modal fade" id="Application" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-light justify-content-center">
-                    <h5 class="modal-title">View Personal Profile</h5>
-                </div>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+  
+    
+   <style>
+   *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family:'Poppins',sans-serif;
+   }
+   body{
+       min-height: 100vh;
+       margin: -10;
+    padding: -10;
+   
+    font-family: sans-serif;
+    background-size: cover;
+    background-position: center;
+   } 
+   .navigation{
+       position: fixed;
+       width: 60px;
+       height: 100%;
+       background:#0a4b9f8f ;
+       transition: 0.5s;
+       overflow: hidden;
+   }
+   .navigation:hover {
+       width: 200px;
+   }  
+   .navigation ul {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+   }
+   .navigation ul li {
+       position: relative;
+       width: 100%;
+       list-style: none;
+   }
+   .navigation ul li:hover{
+       background: #d51313;
+   }
+   .navigation ul li a {
+       position: relative;
+       display: block;
+       width:100%;
+       display: flex;
+       text-decoration: none;
+       color: rgb(255, 255, 255);
+   }
+   .navigation ul li a .icon{
+       position: relative;
+       display: block;
+       min-width: 60px;
+       height: 60px;
+       line-height: 60px;
+       text-align: center;
+   }
+   .navigation ul li a .icon .fa{
+       font-size: 24px;
+   }
+   .navigation ul li a .title{
+       position: relative;
+       display: block;
+        padding: 0 0px;
+       height: 60px;
+       line-height: 60px;
+       text-align: start;
+       white-space: nowrap;
+   }
+   img
+{
+    width:100px ;
+}
+.logoI
+{
+    background-color: rgb(255, 255, 255);
+}
+   .regform
+{
 
-                <form>
-                    <div class="modal-body">
+    width: 900px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background:#0a4b9f71;
+    padding: 0px;
+    margin: 2% auto 0;
+    text-align: center;
+}
+h1{
+    color: white;
+}
+button{
 
-                        <div class="form-group">
+    color: white;
+    width:100px;
+    padding:10px;
+    border-radius:20px ;
+    font-size: 15px;
+    margin: 10px 0;
+    border:none;
+    outline:none;
+    cursor: pointer;
+}
+.btn{
+   background-color:#d51313 ;
+}
+.btn:hover{
+   background-color:rgba(255, 255, 255, 0.144);
+   
+}
+h2{
+    color: white;
+}
+.logoI
+{
 
-                            <body>
-                                <div class="content-panel">
+    background-color: rgba(255, 255, 255, 0.568);
+}
+
+
+   </style>
+    <title>Dashboard</title>
+
+<body background="back.jpg">
+    <div class="navigation">
+        <ul>
+            <li>
+                <a [routerLink]="'/dashboard'">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="'/profile'">
+                    <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <span class="title">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="'/status'">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Application Status</span>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="'/messages'">
+                    <span class="icon"><i class="fa fa-comment" aria-hidden="true"></i></span>
+                    <span class="title">Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                    <span class="title">Sign out</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </div>
+    <section class="overlay">
+        <div class="regform">
+            <div class="logoI"><img src="assets\pictures\ICEP-Logo.png"></div>
+        
+            <h1>PROFILE</h1>
+            <h2></h2>
+            
+            <form name="userform">
+
+                <div class="form-group">
+                 
+                         <table *ngFor ="let applicant of applicants">
+                             <tr>
+                                 <th>
+                                 <label>Student No:</label>
+                                 </th>
+                                 <td>
+                                   {{applicant.studentNumber}} <br>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <th>
+                                  <label for="specialization">Specialization:</label>                                    </th>
+                                 <td>
+                                     
+                                       
+                                     
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <th>
+                                 <label> First Name:</label>
+                                 </th>
+                                 <td>
+                                     <br>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <th>
+                                 <label>Last Name:</label>
+                                 </th>
+                                 <td>
+                                     <br>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <th>
+                                 <label>ID No:</label>
+                                 </th>
+                                 <td>
+                                     <br>
+                                 </td>
+                             </tr>
+                            
+                             <tr>
+                                 <th>
+                                 <label>Address:</label>
+                                 </th>
+                                 <td>
+                                    <br>
+                                 </td>
+                             <tr>
+                                 <th>
+                                 <label>Cell No:</label>
+                                 </th>
+                                 <td>
+                                     
+                                 </td>
+                             </tr>
+                             <tr>
+                               <th><label>Email:</label> &nbsp;
+                       
+                               </th>
+                               <td></td>
+                       
+                             </tr>
+                             <tr>
+                                 <th>
+                                     <label>Password:</label>
+                                 </th>
+                                 <td>
                                     
-                                    <form class="form-horizontal">
-                                        <fieldset class="fieldset">
-                                          
-                                            <div class="form-group avatar">
-                                                <figure class="figure col-md-2 col-sm-3 col-xs-12">
-                                                    <img class="img-rounded img-responsive"
-                                                        src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-                                                </figure>
-                                                <div class="form-inline col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="file" class="file-uploader pull-left">
-                                                    <button type="submit"
-                                                        class="btn btn-sm btn-default-alt pull-left">Update
-                                                        Image</button>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-md-2 col-sm-3 col-xs-12 control-label">User
-                                                    Name</label>
-                                                <div class="col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="text" class="form-control" value="Rebecca">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label class="col-md-2 col-sm-3 col-xs-12 control-label">First
-                                                    Name</label>
-                                                <div class="col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="text" class="form-control" value="Rebecca">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-md-2 col-sm-3 col-xs-12 control-label">Last
-                                                    Name</label>
-                                                <div class="col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="text" class="form-control" value="Sanders">
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                        <fieldset class="fieldset">
-                                            <h3 class="fieldset-title">Contact Info</h3>
-                                            <div class="form-group">
-                                                <label class="col-md-2  col-sm-3 col-xs-12 control-label">Email</label>
-                                                <div class="col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="email" class="form-control"
-                                                        value="Rebecca@website.com">
-                                                    <p class="help-block">This is the email </p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label
-                                                    class="col-md-2  col-sm-3 col-xs-12 control-label">Twitter</label>
-                                                <div class="col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="text" class="form-control" value="SpeedyBecky">
-                                                    <p class="help-block">Your twitter username</p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label
-                                                    class="col-md-2  col-sm-3 col-xs-12 control-label">Linkedin</label>
-                                                <div class="col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="url" class="form-control"
-                                                        value="https://www.linkedin.com/in/lorem">
-                                                    <p class="help-block">eg. https://www.linkedin.com/in/yourname</p>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                        <hr>
-                                        <div class="form-group">
-                                            <div
-                                                class="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0">
-                                                <input class="btn btn-primary" type="submit" value="Update Profile">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </body>
-                        </div>
-                    </div>
-                 </form>
+                                 </td>
+                             </tr>
+                         </table>
+                         
+                         <button  [routerLink]="'/login'">Create Profile</button>
+                        
+                         <hr>
+                         <p> already have a Profile? <button [routerLink]="'/login'" class="reg_btn"> Click here to log in</button>
                 </div>
-            </div>
-        </div>
-    </div> 
+         </form>
+         
+            
+            
+
+           
+            
+        
+            
+
+            <hr>
+           <p> &copy; all rights reserved</p>
+
+           
+
+           
+
+
+        </div> 
+    </section>
+</body>
